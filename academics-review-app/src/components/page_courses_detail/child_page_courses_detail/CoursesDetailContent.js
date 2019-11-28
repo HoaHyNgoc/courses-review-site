@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DetailContentSection from './DetailContentSection';
 
 class CoursesDetailContent extends Component {
     render() {
@@ -6,7 +7,7 @@ class CoursesDetailContent extends Component {
             <div className="news">
                 <div className="container">
                     <div className="row">
-                        <h1>This is content courses detail</h1>
+                        <DetailContentSection />
                     </div>
                 </div>
             </div>
