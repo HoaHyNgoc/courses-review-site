@@ -1,10 +1,10 @@
 import React from "react";
-import ComponentsPageCourses from "./components/page_courses/ComponentsPageCourses";
+import GlobalNavigation from "./components/global_page_navigation/GlobalNavigation";
 
 function App() {
   return (
-    <div>
-        <ComponentsPageCourses />
+    <div className="super_container">
+        <GlobalNavigation />
     </div>
   );
 }
