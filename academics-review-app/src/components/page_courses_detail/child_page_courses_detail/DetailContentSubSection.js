@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ContentSubSectionCode from "./ContentSubSectionCode";
 
 class DetailContentSubSection extends Component {
   SubSectionTitle = (titleItem) => {
@@ -6,8 +7,8 @@ class DetailContentSubSection extends Component {
         <div className="news_post_top d-flex flex-column flex-sm-row">
             <div className="news_post_date_container">
                 <div className="news_post_date d-flex flex-column align-items-center justify-content-center">
-                    <div>18</div>
-                    <div>dec</div>
+                    <div>SEC</div>
+                    <div>01</div>
                 </div>
             </div>
             <div className="news_post_title_container">
@@ -29,9 +30,12 @@ class DetailContentSubSection extends Component {
 
   render() {
     return (
-      <div className="news_posts">
-        {this.SubSectionTitle("This is title subsection")}
-        {this.SubSectionDescription("This is description")}
+      <div>
+        <div className="news_posts">
+            {this.SubSectionTitle("This is title subsection")}
+            {this.SubSectionDescription("This is description")}
+        </div>
+        <ContentSubSectionCode />
       </div>
     );
   }
