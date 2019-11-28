@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PageCoursesPopularChild from "./PageCoursesPopularChild";
 
 class PageCoursesPopular extends Component {
   ComponentHeaderPopular = () => {
@@ -17,8 +18,15 @@ class PageCoursesPopular extends Component {
     return (
       <div className="popular page_section">
         <div className="container">
-            {this.ComponentHeaderPopular()}
-            
+          {this.ComponentHeaderPopular()}
+          <div className="row course_boxes">
+            <PageCoursesPopularChild />
+            <PageCoursesPopularChild />
+            <PageCoursesPopularChild />
+            <PageCoursesPopularChild />
+            <PageCoursesPopularChild />
+            <PageCoursesPopularChild />
+          </div>
         </div>
       </div>
     );
