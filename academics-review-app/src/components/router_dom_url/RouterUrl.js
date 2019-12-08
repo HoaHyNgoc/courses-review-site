@@ -15,7 +15,7 @@ export default class RouterUrl extends Component {
                 <Route path="/courses-details"><ComponentsPageCoursesDetail /></Route>
                 <Route path="/admin-index-data"><PageAdminCrudIndex /></Route>
                 <Route path="/admin-create-data"><PageAdminCrudCreate /></Route>
-                <Route path="/admin-edit-data"><PageAdminCrudEdit /></Route>
+                <Route path="/edit/:id" component={ PageAdminCrudEdit }/>
                 <Route component={ComponentsPageCourses}/>
             </Switch>
         );
