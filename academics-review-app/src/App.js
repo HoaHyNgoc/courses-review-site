@@ -1,17 +1,18 @@
 import React from "react";
-import GlobalNavigation from "./components/global_page_navigation/GlobalNavigation";
-import ComponentsPageCourses from "./components/page_courses/ComponentsPageCourses";
-import GlobalFooter from "./components/global_page_footer/GlobalFooter";
-import ComponentsPageCoursesDetail from "./components/page_courses_detail/ComponentsPageCoursesDetail";
+import { BrowserRouter as Router } from "react-router-dom";
+import RouterUrl from "./components/router_dom_url/RouterUrl";
 
 function App() {
   return (
-    <div className="super_container">
-        <GlobalNavigation />
-        {/* <ComponentsPageCourses /> */}
-        <ComponentsPageCoursesDetail />
-        <GlobalFooter />
-    </div>
+    <Router>
+        <div className="super_container">
+            {/* <GlobalNavigation /> */}
+            <RouterUrl />
+            {/* <ComponentsPageCourses /> */}
+            {/* <ComponentsPageCoursesDetail /> */}
+            {/* <GlobalFooter /> */}
+        </div>
+    </Router>
   );
 }
 
