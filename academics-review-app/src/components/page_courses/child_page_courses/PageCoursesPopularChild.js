@@ -3,8 +3,7 @@ import React, { Component } from "react";
 class PageCoursesPopularChild extends Component {
 
   constructor(props) {
-      super(props);
-      
+      super(props); 
   }
   
   render() {
@@ -15,13 +14,13 @@ class PageCoursesPopularChild extends Component {
                     <div className="card-body text-center">
                         <div className="card-title">
                             {/* <a href="courses.html">A complete guide to design</a> */}
-                            <a href="courses.html">{this.props.obj.person_name}</a>
+                            <a href="courses.html">{this.props.obj.course_title}</a>
                         </div>
                         {/* <div className="card-text">
                             Adobe Guide, Layes, Smart Objects etc...
                         </div> */}
                         <div className="card-text">
-                            {this.props.obj.business_name}
+                            {this.props.obj.course_description}
                         </div>
                     </div>
                 <div className="price_box d-flex flex-row align-items-center">
@@ -32,7 +31,7 @@ class PageCoursesPopularChild extends Component {
                         Michael Smith, <span>Author</span>
                     </div>
                     <div className="course_price d-flex flex-column align-items-center justify-content-center">
-                        <span>${this.props.obj.business_gst_number}</span>
+                        <span>${this.props.obj.course_price}</span>
                     </div>
                 </div>
             </div>

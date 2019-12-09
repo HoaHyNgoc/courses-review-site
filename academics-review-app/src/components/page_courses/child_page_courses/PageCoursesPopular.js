@@ -7,23 +7,34 @@ class PageCoursesPopular extends Component {
     super(props);
     
     // init state variable
-    this.state = { business: [] };
+    // this.state = { business: [] };
+    this.state = {courses:[]};
   }
 
   componentDidMount() {
-    axios
-      .get("http://localhost:4000/business")
-      .then(response => {
-        this.setState({ business: response.data });
-      })
-      .catch(function(error) {
+    // axios
+    //   .get("http://localhost:4000/business")
+    //   .then(response => {
+    //     this.setState({ business: response.data });
+    //   })
+    //   .catch(function(error) {
+    //     console.log(error);
+    //   });
+    axios.get('http://localhost:4000/course')
+    .then(response => {
+        this.setState({ courses: response.data });
+    })
+    .catch(function (error) {
         console.log(error);
-      });
+    })
   }
 
   // mapping data (database - display frontend)
   coursesDataItem = () => {
-    return this.state.business.map(function(object, i) {
+    // return this.state.business.map(function(object, i) {
+    //   return <PageCoursesPopularChild obj={object} key={i} />;
+    // });
+    return this.state.courses.map(function(object, i) {
       return <PageCoursesPopularChild obj={object} key={i} />;
     });
   };
