@@ -9,19 +9,19 @@ class ContentSideCategory extends Component {
         </div>
         <ul className="sidebar_list">
             <li className="sidebar_list_item">
-                <a href="#">Design Courses</a>
+                <a href="index.html">Design Courses</a>
             </li>
             <li className="sidebar_list_item">
-                <a href="#">All you need to know</a>
+                <a href="index.html">All you need to know</a>
             </li>
             <li className="sidebar_list_item">
-                <a href="#">Uncategorized</a>
+                <a href="index.html">Uncategorized</a>
             </li>
             <li className="sidebar_list_item">
-                <a href="#">About Our Departments</a>
+                <a href="index.html">About Our Departments</a>
             </li>
             <li className="sidebar_list_item">
-                <a href="#">Choose the right course</a>
+                <a href="index.html">Choose the right course</a>
             </li>
         </ul>
       </div>

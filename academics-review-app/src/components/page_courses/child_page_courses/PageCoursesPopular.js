@@ -1,7 +1,33 @@
 import React, { Component } from "react";
 import PageCoursesPopularChild from "./PageCoursesPopularChild";
+import axios from "axios";
 
 class PageCoursesPopular extends Component {
+  constructor(props) {
+    super(props);
+    
+    // init state variable
+    this.state = { business: [] };
+  }
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:4000/business")
+      .then(response => {
+        this.setState({ business: response.data });
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
+
+  // mapping data (database - display frontend)
+  coursesDataItem = () => {
+    return this.state.business.map(function(object, i) {
+      return <PageCoursesPopularChild obj={object} key={i} />;
+    });
+  };
+
   ComponentHeaderPopular = () => {
     return (
       <div className="row">
@@ -20,12 +46,13 @@ class PageCoursesPopular extends Component {
         <div className="container">
           {this.ComponentHeaderPopular()}
           <div className="row course_boxes">
+            {this.coursesDataItem()}
+            {/* <PageCoursesPopularChild />
             <PageCoursesPopularChild />
             <PageCoursesPopularChild />
             <PageCoursesPopularChild />
             <PageCoursesPopularChild />
-            <PageCoursesPopularChild />
-            <PageCoursesPopularChild />
+            <PageCoursesPopularChild /> */}
           </div>
         </div>
       </div>

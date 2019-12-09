@@ -29,16 +29,16 @@ class GlobalFooter extends Component {
                   <a href="index.html">Home</a>
                 </li>
                 <li className="footer_list_item">
-                  <a href="#">About Us</a>
+                  <a href="index.html">About Us</a>
                 </li>
                 <li className="footer_list_item">
-                  <a href="#">Courses</a>
+                  <a href="index.html">Courses</a>
                 </li>
                 <li className="footer_list_item">
-                  <a href="news.html">News</a>
+                  <a href="index.html">News</a>
                 </li>
                 <li className="footer_list_item">
-                  <a href="contact.html">Contact</a>
+                  <a href="index.html">Contact</a>
                 </li>
               </ul>
             </div>
@@ -49,19 +49,19 @@ class GlobalFooter extends Component {
             <div className="footer_column_content">
               <ul>
                 <li className="footer_list_item">
-                  <a href="#">Testimonials</a>
+                  <a href="index.html">Testimonials</a>
                 </li>
                 <li className="footer_list_item">
-                  <a href="#">FAQ</a>
+                  <a href="index.html">FAQ</a>
                 </li>
                 <li className="footer_list_item">
-                  <a href="#">Community</a>
+                  <a href="index.html">Community</a>
                 </li>
                 <li className="footer_list_item">
-                  <a href="#">Campus Pictures</a>
+                  <a href="index.html">Campus Pictures</a>
                 </li>
                 <li className="footer_list_item">
-                  <a href="#">Tuitions</a>
+                  <a href="index.html">Tuitions</a>
                 </li>
               </ul>
             </div>
@@ -92,8 +92,8 @@ class GlobalFooter extends Component {
                 <li className="footer_contact_item">
                   <div className="footer_contact_icon">
                     <img
-                        src="images/envelope.svg"
-                        alt="https://www.flaticon.com/authors/lucy-g"
+                      src="images/envelope.svg"
+                      alt="https://www.flaticon.com/authors/lucy-g"
                     />
                   </div>
                   hello@company.com
@@ -108,9 +108,9 @@ class GlobalFooter extends Component {
 
   render() {
     return (
-        <footer className="footer">
-            <div className="container">{this.ComponentGlobalFooterContent()}</div>
-        </footer>
+      <footer className="footer">
+        <div className="container">{this.ComponentGlobalFooterContent()}</div>
+      </footer>
     );
   }
 }

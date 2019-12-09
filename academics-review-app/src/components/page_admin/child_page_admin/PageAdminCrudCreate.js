@@ -55,10 +55,10 @@ export default class PageAdminCrudCreate extends Component {
     render() {
         return (
             <div style={{ marginTop: 10 }} className="container">
-                <h3>Add New Business</h3>
+                <h3>Add Courses Business</h3>
                 <form onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    <label>Person Name:  </label>
+                    <label>Card title:  </label>
                     <input 
                       type="text" 
                       className="form-control" 
@@ -67,7 +67,7 @@ export default class PageAdminCrudCreate extends Component {
                       />
                 </div>
                 <div className="form-group">
-                    <label>Business Name: </label>
+                    <label>Card text: </label>
                     <input type="text" 
                       className="form-control"
                       value={this.state.business_name}
@@ -75,7 +75,7 @@ export default class PageAdminCrudCreate extends Component {
                       />
                 </div>
                 <div className="form-group">
-                    <label>GST Number: </label>
+                    <label>Card author: </label>
                     <input type="text" 
                       className="form-control"
                       value={this.state.business_gst_number}
