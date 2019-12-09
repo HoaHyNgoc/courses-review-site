@@ -16,4 +16,16 @@ courseRoutes.route('/add').post(function (req, res) {
       });
 });
 
+// Defined get data(index or listing) route
+courseRoutes.route('/').get(function (req, res) {
+  Course.find(function(err, courses){
+  if(err){
+    console.log(err);
+  }
+  else {
+    res.json(courses);
+  }
+});
+});
+
 module.exports = courseRoutes;

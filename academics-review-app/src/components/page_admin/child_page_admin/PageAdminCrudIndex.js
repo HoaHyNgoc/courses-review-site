@@ -8,13 +8,21 @@ export default class PageAdminCrudIndex extends Component {
         super(props);
         
         // init state variable
-        this.state = {business: []};
+        // this.state = {business: []};
+        this.state = {courses:[]};
     }
     
     componentDidMount(){
-        axios.get('http://localhost:4000/business')
+        // axios.get('http://localhost:4000/business')
+        // .then(response => {
+        //     this.setState({ business: response.data });
+        // })
+        // .catch(function (error) {
+        //     console.log(error);
+        // })
+        axios.get('http://localhost:4000/course')
         .then(response => {
-            this.setState({ business: response.data });
+            this.setState({ courses: response.data });
         })
         .catch(function (error) {
             console.log(error);
@@ -23,7 +31,10 @@ export default class PageAdminCrudIndex extends Component {
 
     // mapping data (database - display frontend)
     tabRow = () =>{
-        return this.state.business.map(function(object, i){
+        // return this.state.business.map(function(object, i){
+        //     return <TableRow obj={object} key={i} />;
+        // });
+        return this.state.courses.map(function(object, i){
             return <TableRow obj={object} key={i} />;
         });
     }
@@ -31,13 +42,13 @@ export default class PageAdminCrudIndex extends Component {
     render() {
         return (
           <div className="container">
-            <h3 align="center">Business List</h3>
+            <h3 align="center">Course List</h3>
             <table className="table table-striped" style={{ marginTop: 20 }}>
                 <thead>
                     <tr>
-                    <th>Person</th>
-                    <th>Business</th>
-                    <th>GST Number</th>
+                    <th>Course name</th>
+                    <th>Course description</th>
+                    <th>Course price</th>
                     <th colSpan="2">Action</th>
                     </tr>
                 </thead>
