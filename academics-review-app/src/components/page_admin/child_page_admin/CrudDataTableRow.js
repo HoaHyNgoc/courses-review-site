@@ -10,10 +10,14 @@ export default class CrudDataTableRow extends Component {
   }
 
   delete() {
+    // axios
+    //   .get("http://localhost:4000/business/delete/" + this.props.obj._id)
+    //   .then(console.log("Deleted"))
+    //   .catch(err => console.log(err));
     axios
-      .get("http://localhost:4000/business/delete/" + this.props.obj._id)
-      .then(console.log("Deleted"))
-      .catch(err => console.log(err));
+    .get("http://localhost:4000/course/delete/" + this.props.obj._id)
+    .then(console.log("Deleted"))
+    .catch(err => console.log(err));
     }
 
   render() {
