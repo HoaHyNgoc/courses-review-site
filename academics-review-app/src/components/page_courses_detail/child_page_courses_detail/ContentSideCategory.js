@@ -1,29 +1,38 @@
 import React, { Component } from "react";
+import axios from "axios";
+import SubSildeCategory from "./SubSildeCategory";
 
 class ContentSideCategory extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { sections: [] };
+  }
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:4000/section")
+      .then(response => {
+        this.setState({ sections: response.data });
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
+
+  // mapping data (database - display frontend)
+  subSectionRow = () => {
+    return this.state.sections.map(function(object, i) {
+      return <SubSildeCategory obj={object} key={i} />;
+    });
+  };
+
   render() {
     return (
       <div className="sidebar_section">
         <div className="sidebar_section_title">
-            <h3>Sections</h3>
+          <h3>Sections</h3>
         </div>
-        <ul className="sidebar_list">
-            <li className="sidebar_list_item">
-                <a href="index.html">Design Courses</a>
-            </li>
-            <li className="sidebar_list_item">
-                <a href="index.html">All you need to know</a>
-            </li>
-            <li className="sidebar_list_item">
-                <a href="index.html">Uncategorized</a>
-            </li>
-            <li className="sidebar_list_item">
-                <a href="index.html">About Our Departments</a>
-            </li>
-            <li className="sidebar_list_item">
-                <a href="index.html">Choose the right course</a>
-            </li>
-        </ul>
+        <ul className="sidebar_list">{this.subSectionRow()}</ul>
       </div>
     );
   }
