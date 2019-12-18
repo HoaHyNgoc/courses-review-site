@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DetailContentSubSection from './DetailContentSubSection';
 import axios from 'axios';
+import CourseDetailExercise from './ContentCourseExercise/CourseDetailExercise';
 
 class DetailContentSection extends Component {
 
@@ -40,6 +41,7 @@ class DetailContentSection extends Component {
             <div className="col-lg-8 scroll-add">
                 {this.SectionContentTitle("1", "Title Section")}
                 {this.getDetailContentSubsection()}
+                <CourseDetailExercise />
             </div>
         );
     }
