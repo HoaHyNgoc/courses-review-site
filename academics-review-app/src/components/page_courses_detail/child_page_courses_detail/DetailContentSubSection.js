@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ContentSubSectionCode from "./ContentSubSectionCode";
 
 class DetailContentSubSection extends Component {
-  SubSectionTitle = (titleItem) => {
+  SubSectionTitle = (titleItem, linkItem) => {
     return (
         <div className="news_post_top d-flex flex-column flex-sm-row">
             <div className="news_post_date_container">
@@ -13,7 +13,7 @@ class DetailContentSubSection extends Component {
             </div>
             <div className="news_post_title_container">
                     <div className="news_post_title">
-                        <a href="news_post.html">{titleItem}</a>
+                        <a href="https://repl.it/languages/python3" target="_blank">{titleItem}</a>
                     </div>
             </div>
         </div>
@@ -32,10 +32,10 @@ class DetailContentSubSection extends Component {
     return (
       <div>
         <div className="news_posts">
-            {this.SubSectionTitle("This is title subsection")}
-            {this.SubSectionDescription("This is description")}
+            {this.SubSectionTitle(this.props.obj.section_title, this.props.obj.section_link_code)}
+            {this.SubSectionDescription(this.props.obj.section_description)}
         </div>
-        <ContentSubSectionCode />
+        <ContentSubSectionCode codeExample ={this.props.obj.section_code} />
       </div>
     );
   }

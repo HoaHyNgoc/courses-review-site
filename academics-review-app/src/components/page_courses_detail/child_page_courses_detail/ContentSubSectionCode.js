@@ -5,7 +5,7 @@ class ContentSubSectionCode extends Component {
         return (
             <div className="w3-example">
                 <div className="w3-code">
-                    <span>print("Five is greater than two!")</span>                        
+                    <span>{this.props.codeExample}</span>                        
                 </div>
             </div>
         );

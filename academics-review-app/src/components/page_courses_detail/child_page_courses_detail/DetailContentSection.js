@@ -1,7 +1,32 @@
 import React, { Component } from 'react';
 import DetailContentSubSection from './DetailContentSubSection';
+import axios from 'axios';
 
 class DetailContentSection extends Component {
+
+    constructor(props) {
+        super(props);        
+        this.state = {sections: []};
+    }
+
+    componentDidMount() {
+        axios
+          .get("http://localhost:4000/section")
+          .then(response => {
+            this.setState({ sections: response.data });
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+    }
+
+    getDetailContentSubsection(){
+        return this.state.sections.map(function(object, i) {
+            return <DetailContentSubSection obj={object} key={i} />;
+        });
+    }
+    
+
     SectionContentTitle = (idCourse, titleSection) => {
         return (
             <div className="news_post_title">
@@ -14,11 +39,7 @@ class DetailContentSection extends Component {
         return (
             <div className="col-lg-8 scroll-add">
                 {this.SectionContentTitle("1", "Title Section")}
-                <DetailContentSubSection />
-                <DetailContentSubSection />
-                <DetailContentSubSection />
-                <DetailContentSubSection />
-                <DetailContentSubSection />
+                {this.getDetailContentSubsection()}
             </div>
         );
     }
