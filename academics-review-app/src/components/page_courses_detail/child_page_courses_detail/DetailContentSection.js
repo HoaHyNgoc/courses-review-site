@@ -22,8 +22,13 @@ class DetailContentSection extends Component {
     }
 
     getDetailContentSubsection(){
+        // var id = parseInt(this.props.idCourse);
+        // console.log(typeof(id) );
         return this.state.sections.map(function(object, i) {
-            return <DetailContentSubSection obj={object} key={i} />;
+            // if (object.section_id_course == id) {
+            //     return <DetailContentSubSection obj={object} key={i} />;
+            // }  
+            return <DetailContentSubSection obj={object} key={i} />;    
         });
     }
     

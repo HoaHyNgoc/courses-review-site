@@ -6,11 +6,13 @@ import GlobalFooter from '../global_page_footer/GlobalFooter';
 
 class ComponentsPageCoursesDetail extends Component {
     render() {
+        var pid = this.props.match.params.id;
         return (
             <div>
                 <GlobalNavigation />
                 <PageCoursesHeader />
-                <CoursesDetailContent />
+                <CoursesDetailContent idCourseSelected={pid}/>
+                <CoursesDetailContent/>
                 <GlobalFooter />
             </div>
         );

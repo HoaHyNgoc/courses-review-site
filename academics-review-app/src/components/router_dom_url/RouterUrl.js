@@ -15,7 +15,8 @@ export default class RouterUrl extends Component {
         return (
             <Switch>
                 <Route exact path="/"><ComponentsPageCourses /></Route>
-                <Route path="/courses-details"><ComponentsPageCoursesDetail /></Route>
+                {/* <Route path="/courses-details"><ComponentsPageCoursesDetail /></Route> */}
+                <Route path="/courses-details/:id" component={ComponentsPageCoursesDetail}/>
                 <Route path="/admin-index-data"><PageAdminCrudIndex /></Route>
                 <Route path="/admin-create-data"><PageAdminCrudCreate /></Route>
                 <Route path="/edit/:id" component={ PageAdminCrudEdit }/>

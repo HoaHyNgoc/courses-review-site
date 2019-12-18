@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 class PageCoursesPopularChild extends Component {
   render() {
@@ -11,7 +11,8 @@ class PageCoursesPopularChild extends Component {
                         <div className="card-title">
                             {/* <a href="courses.html">A complete guide to design</a> */}
                             {/* <a href="courses.html">{this.props.obj.course_title}</a> */}
-                            <NavLink to="/courses-details">{this.props.obj.course_title}</NavLink>
+                            {/* <NavLink  to="/courses-details">{this.props.obj.course_title}</NavLink> */}
+                            <Link  to={"/courses-details/" + "12"}>{this.props.obj.course_title}</Link>
                         </div>
                         {/* <div className="card-text">
                             Adobe Guide, Layes, Smart Objects etc...

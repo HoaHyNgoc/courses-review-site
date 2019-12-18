@@ -10,7 +10,7 @@ class GlobalFooter extends Component {
             {/* Logo */}
             <div className="logo_container">
               <div className="logo">
-                <img src="images/logo.png" alt="" />
+                <img src="/images/logo.png" alt="" />
                 <span>course</span>
               </div>
             </div>
@@ -74,7 +74,7 @@ class GlobalFooter extends Component {
                 <li className="footer_contact_item">
                   <div className="footer_contact_icon">
                     <img
-                      src="images/placeholder.svg"
+                      src="/images/placeholder.svg"
                       alt="https://www.flaticon.com/authors/lucy-g"
                     />
                   </div>
@@ -83,7 +83,7 @@ class GlobalFooter extends Component {
                 <li className="footer_contact_item">
                   <div className="footer_contact_icon">
                     <img
-                      src="images/smartphone.svg"
+                      src="/images/smartphone.svg"
                       alt="https://www.flaticon.com/authors/lucy-g"
                     />
                   </div>
@@ -92,7 +92,7 @@ class GlobalFooter extends Component {
                 <li className="footer_contact_item">
                   <div className="footer_contact_icon">
                     <img
-                      src="images/envelope.svg"
+                      src="/images/envelope.svg"
                       alt="https://www.flaticon.com/authors/lucy-g"
                     />
                   </div>

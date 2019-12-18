@@ -10,7 +10,7 @@ class GlobalNavigation extends Component {
             {/* Logo */}
             <div className="logo_container">
                 <div className="logo">
-                    <img src="images/logo.png" alt="" />
+                    <img src="/images/logo.png" alt="" />
                     <span>course</span>
                 </div>
             </div>
@@ -35,7 +35,7 @@ class GlobalNavigation extends Component {
             </nav>
           </div>
           <div className="header_side d-flex flex-row justify-content-center align-items-center">
-                <img src="images/phone-call.svg" alt="" />
+                <img src="/images/phone-call.svg" alt="" />
                 <span>+43 4566 7788 2457</span>
           </div>
           {/* Hamburger */}

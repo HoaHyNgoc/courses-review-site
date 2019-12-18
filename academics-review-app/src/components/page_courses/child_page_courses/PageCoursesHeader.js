@@ -7,7 +7,7 @@ class PageCoursesHeader extends Component {
         <div className="home_background_container prlx_parent">
           <div
             className="hero_slide_background"
-            style={{ backgroundImage: "url(images/slider_background.jpg)" }}
+            style={{ backgroundImage: "url(/images/slider_background.jpg)" }}
           />
         </div>
         <div className="home_content">
