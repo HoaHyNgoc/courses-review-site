@@ -12,7 +12,7 @@ class PageCoursesPopularChild extends Component {
                             {/* <a href="courses.html">A complete guide to design</a> */}
                             {/* <a href="courses.html">{this.props.obj.course_title}</a> */}
                             {/* <NavLink  to="/courses-details">{this.props.obj.course_title}</NavLink> */}
-                            <Link  to={"/courses-details/" + "12"}>{this.props.obj.course_title}</Link>
+                            <Link  to={"/courses-details/" + this.props.obj.course_price}>{this.props.obj.course_title}</Link>
                         </div>
                         {/* <div className="card-text">
                             Adobe Guide, Layes, Smart Objects etc...

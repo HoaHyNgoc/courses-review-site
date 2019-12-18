@@ -12,7 +12,7 @@ class ComponentsPageCoursesDetail extends Component {
                 <GlobalNavigation />
                 <PageCoursesHeader />
                 <CoursesDetailContent idCourseSelected={pid}/>
-                <CoursesDetailContent/>
+                {/* <CoursesDetailContent/> */}
                 <GlobalFooter />
             </div>
         );

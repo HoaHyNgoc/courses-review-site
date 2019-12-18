@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DetailContentSection from './DetailContentSection';
 import DetailContentSide from './DetailContentSide';
+import CourseDetailExercise from './ContentCourseExercise/CourseDetailExercise';
 
 class CoursesDetailContent extends Component {
     render() {
@@ -12,6 +13,7 @@ class CoursesDetailContent extends Component {
                         <DetailContentSide idCourse={this.props.idCourseSelected}/>
                         {/* <DetailContentSection />
                         <DetailContentSide /> */}
+                        <CourseDetailExercise />
                     </div>
                 </div>
             </div>

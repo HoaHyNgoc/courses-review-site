@@ -6,7 +6,7 @@ class DetailContentSide extends Component {
         return (
             <div className="col-lg-4">
                 <div class="sidebar">
-                    <ContentSideCategory />
+                    <ContentSideCategory idCourse={this.props.idCourse}/>
                 </div>
             </div>
         );
