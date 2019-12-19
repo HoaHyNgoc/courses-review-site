@@ -13,8 +13,9 @@ class CoursesDetailContent extends Component {
                         {/* <DetailContentSide idCourse={this.props.idCourseSelected}/> */}
                         {/* <DetailContentSection />
                         <DetailContentSide /> */}
-                        <CourseDetailExercise />
+                        
                     </div>
+                    <CourseDetailExercise idCourse={this.props.idCourseSelected}/>
                 </div>
             </div>
         );

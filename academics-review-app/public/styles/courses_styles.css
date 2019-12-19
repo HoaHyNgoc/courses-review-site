@@ -1014,3 +1014,42 @@ section
 {
 	margin-right: 0px;
 }
+
+/*********************************
+11 Exercise
+*********************************/
+.pbar_container
+{
+	background: #f8f4f4;
+}
+
+.code_example{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.accordion
+{
+	font-size: 13px;
+	padding-left: 20px;
+	padding-right: 50px;
+}
+
+.accordion
+{
+	height: 60px;
+	width: 100%;
+	background: #f8f4f4;
+	padding-left: 30px;
+	cursor: pointer;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+.accordion:hover
+{
+	background: #e4e4e4;
+}
