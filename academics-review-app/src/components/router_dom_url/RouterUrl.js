@@ -24,6 +24,8 @@ export default class RouterUrl extends Component {
                 <Route path="/admin-create-section" component={SectionAdminCrudCreate}/>
                 <Route path="/admin-index-section" component={SectionAdminCrudIndex}/>
                 <Route path="/current/:id" component={ SectionAdminCrudEdit }/>
+                {/* sample */}
+
                 <Route component={ComponentsPageCourses}/>
             </Switch>
         );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ContentSubSectionCode from '../ContentSubSectionCode';
+import ContentSubSectionCode from "../ContentSubSectionCode";
 
 export default class CourseDetailExercise extends Component {
   render() {
@@ -12,11 +12,39 @@ export default class CourseDetailExercise extends Component {
             </div>
           </div>
         </div>
-        <div className="row news_post_text" style={{marginLeft: '50px'}}>
-            <p>Use the correct HTML to make the text below into a link to "default.html".</p>        
+        <div className="row news_post_text" style={{ marginLeft: "50px" }}>
+          <p>
+            Use the correct HTML to make the text below into a link to
+            "default.html".
+          </p>
         </div>
-        <div className="row" style={{marginLeft: '50px'}}>
-            <ContentSubSectionCode codeExample ="Use the correct HTML to make the text below into a link to default.html"/>
+        <div className="row" style={{ marginLeft: "50px" }}>
+          <ContentSubSectionCode codeExample="Use the correct HTML to make the text below into a link to default.html" />
+        </div>
+        <div className="row" style={{ marginLeft: "50px" }}>
+          <form>
+            <div className="form-check-inline">
+              <label className="form-check-label" htmlFor="radio1">
+                <input type="radio" className="form-check-input"
+                  id="radio1" name="optradio"
+                  defaultValue="option1"
+                />
+                Option 1
+              </label>
+            </div>
+            <div className="form-check-inline">
+              <label className="form-check-label" htmlFor="radio2">
+                <input type="radio" className="form-check-input"
+                  id="radio2" name="optradio"
+                  defaultValue="option2"
+                />
+                Option 2
+              </label>
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </form>
         </div>
         <div className="row">
           <div className="col text-center">
