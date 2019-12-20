@@ -1053,3 +1053,36 @@ section
 {
 	background: #e4e4e4;
 }
+
+.result-example{
+	color: #db5246;
+	background-color: #FFFFFF;
+	padding: 5px;
+	width: 100px;
+}
+
+.hide-result{
+	visibility: hidden;
+}
+
+.visible-result{
+	visibility: visible;
+}
+
+.assignmentCorrect {
+    color: #468847;
+    background-color: #dff0d8;
+	border: 1px solid #d6e9c6;
+	padding: 20px;
+	margin-top: 20px;
+	width: auto;
+}
+
+.assignmentNotCorrect {
+    color: #dd7f7f;
+    background-color: #f5d7d7;
+	border: 1px solid #f5d7d7;
+	padding: 20px;
+	margin-top: 20px;
+	width: auto;
+}
