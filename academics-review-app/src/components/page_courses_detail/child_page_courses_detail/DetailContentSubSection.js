@@ -8,7 +8,7 @@ class DetailContentSubSection extends Component {
             <div className="news_post_date_container">
                 <div className="news_post_date d-flex flex-column align-items-center justify-content-center">
                     <div>SEC</div>
-                    <div>01</div>
+                    <div>...</div>
                 </div>
             </div>
             <div className="news_post_title_container">

@@ -8,6 +8,8 @@ import PageAdminCrudEdit from '../page_admin/child_page_admin/PageAdminCrudEdit'
 import SectionAdminCrudCreate from '../page_admin/section_page_admin/SectionAdminCrudCreate';
 import SectionAdminCrudIndex from '../page_admin/section_page_admin/SectionAdminCrudIndex';
 import SectionAdminCrudEdit from '../page_admin/section_page_admin/SectionAdminCrudEdit';
+import ComponentsPageAdmin from '../page_admin/ComponentsPageAdmin';
+import ComponentPageAbout from '../page_aboutus/ComponentPageAbout';
 
 
 export default class RouterUrl extends Component {
@@ -25,6 +27,11 @@ export default class RouterUrl extends Component {
                 <Route path="/admin-index-section" component={SectionAdminCrudIndex}/>
                 <Route path="/current/:id" component={ SectionAdminCrudEdit }/>
                 {/* sample */}
+
+                <Route path="/admin/:pass" component={ComponentsPageAdmin}/>
+
+                {/* about us */}
+                <Route path="/about" component={ComponentPageAbout}/>
 
                 <Route component={ComponentsPageCourses}/>
             </Switch>

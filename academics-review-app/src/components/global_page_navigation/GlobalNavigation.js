@@ -22,13 +22,13 @@ class GlobalNavigation extends Component {
                             <NavLink exact to="/">courses</NavLink>
                         </li>
                         <li className="main_nav_item">
-                            <NavLink to="/courses-details">courses Details</NavLink>
-                        </li>
-                        <li className="main_nav_item">
                             <NavLink to="/courses-details">news</NavLink>
                         </li>
                         <li className="main_nav_item">
-                            <NavLink to="/courses-details">about us</NavLink>
+                            <NavLink to="/courses-details">feedback</NavLink>
+                        </li>
+                        <li className="main_nav_item">
+                            <NavLink to="/about">about us</NavLink>
                         </li>
                     </ul>
                 </div>

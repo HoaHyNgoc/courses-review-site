@@ -9,8 +9,8 @@ class CoursesDetailContent extends Component {
             <div className="news">
                 <div className="container">
                     <div className="row">
-                        {/* <DetailContentSection idCourse={this.props.idCourseSelected}/> */}
-                        {/* <DetailContentSide idCourse={this.props.idCourseSelected}/> */}
+                        <DetailContentSection idCourse={this.props.idCourseSelected}/>
+                        <DetailContentSide idCourse={this.props.idCourseSelected}/>
                         {/* <DetailContentSection />
                         <DetailContentSide /> */}
                         

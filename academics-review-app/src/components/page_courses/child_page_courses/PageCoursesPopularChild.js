@@ -26,10 +26,10 @@ class PageCoursesPopularChild extends Component {
                         <img src="images/author.jpg" alt="https://unsplash.com/@mehdizadeh"/>
                     </div>
                     <div className="course_author_name">
-                        Michael Smith, <span>Author</span>
+                        UIT Review, <span>Author</span>
                     </div>
                     <div className="course_price d-flex flex-column align-items-center justify-content-center">
-                        <span>${this.props.obj.course_price}</span>
+                        <span>{this.props.obj.course_price}</span>
                     </div>
                 </div>
             </div>

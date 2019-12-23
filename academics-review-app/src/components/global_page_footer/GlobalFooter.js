@@ -15,9 +15,8 @@ class GlobalFooter extends Component {
               </div>
             </div>
             <p className="footer_about_text">
-              In aliquam, augue a gravida rutrum, ante nisl fermentum nulla,
-              vitae tempor nisl ligula vel nunc. Proin quis mi malesuada,
-              finibus tortor fermentum, tempor lacus.
+              Website system that supports programmer's knowledge that should be
+              developed for the subject project.
             </p>
           </div>
           {/* Footer Column - Menu */}
@@ -26,16 +25,13 @@ class GlobalFooter extends Component {
             <div className="footer_column_content">
               <ul>
                 <li className="footer_list_item">
-                  <a href="index.html">Home</a>
-                </li>
-                <li className="footer_list_item">
-                  <a href="index.html">About Us</a>
-                </li>
-                <li className="footer_list_item">
-                  <a href="index.html">Courses</a>
+                  <a href="index.html">Course</a>
                 </li>
                 <li className="footer_list_item">
                   <a href="index.html">News</a>
+                </li>
+                <li className="footer_list_item">
+                  <a href="index.html">About Us</a>
                 </li>
                 <li className="footer_list_item">
                   <a href="index.html">Contact</a>
