@@ -48,7 +48,7 @@ export default class PageAdminCrudIndex extends Component {
                     <tr>
                     <th>Course name</th>
                     <th>Course description</th>
-                    <th>Course price</th>
+                    <th>Course identification</th>
                     <th colSpan="2">Action</th>
                     </tr>
                 </thead>

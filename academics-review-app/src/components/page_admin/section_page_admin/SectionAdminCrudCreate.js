@@ -21,6 +21,8 @@ export default class SectionAdminCrudCreate extends Component {
     this.onChangeSampleTrue = this.onChangeSampleTrue.bind(this);
     this.onCreateSample = this.onCreateSample.bind(this);
 
+    this.getIdCourseSelected = this.getIdCourseSelected.bind(this);
+
     // init state variable
     this.state = {
       // section
@@ -36,9 +38,38 @@ export default class SectionAdminCrudCreate extends Component {
       sample_code: "",
       sample_ans_a: "",
       sample_ans_b: "",
-      sampple_ans_true: ""
+      sampple_ans_true: "",
 
+      courses: []
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:4000/course")
+      .then(response => {
+        this.setState({ courses: response.data });
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
+
+  // mapping data (database - display frontend)
+  tabRow = () => {
+    return this.state.courses.map(function(object, i) {
+      // return <TableRow obj={object} key={i} />;
+      return <option value={object.course_price}>{object.course_title}</option>;
+    });
+  };
+
+  getIdCourseSelected(e){
+    // var a = option.options[option.selectedIndex].value;
+    var e = document.getElementById("section_course");
+    console.log("index: " +  e.options[e.selectedIndex].value);
+    this.setState({
+      section_id_course: e.options[e.selectedIndex].value
+    });
   }
 
   onChangeIdCourse(e) {
@@ -74,6 +105,13 @@ export default class SectionAdminCrudCreate extends Component {
   onSubmit(e) {
     e.preventDefault();
 
+    // this.getIdCourseSelected(document.getElementById("section_course"));
+    // if(this.state.section_id_course === ""){
+    //   console.log("null");
+    // }else{
+    //   console.log("error: " + this.state.section_id_course);
+    // }
+    
     const obj = {
       section_id_course: this.state.section_id_course,
       section_title: this.state.section_title,
@@ -82,6 +120,8 @@ export default class SectionAdminCrudCreate extends Component {
       section_link_code: this.state.section_link_code
     };
     console.log(obj);
+
+    
 
     axios
       .post("http://localhost:4000/section/add", obj)
@@ -96,43 +136,43 @@ export default class SectionAdminCrudCreate extends Component {
     });
   }
 
-  onChangeSampleIdCourse(e){
+  onChangeSampleIdCourse(e) {
     this.setState({
       sample_id_course: e.target.value
     });
   }
 
-  onChangeSampleDes(e){
+  onChangeSampleDes(e) {
     this.setState({
       sample_description: e.target.value
     });
   }
 
-  onChangeSampleCode(e){
+  onChangeSampleCode(e) {
     this.setState({
       sample_code: e.target.value
     });
   }
 
-  onChangeSampleA(e){
+  onChangeSampleA(e) {
     this.setState({
       sample_ans_a: e.target.value
     });
   }
 
-  onChangeSampleB(e){
+  onChangeSampleB(e) {
     this.setState({
       sample_ans_b: e.target.value
     });
   }
 
-  onChangeSampleTrue(e){
+  onChangeSampleTrue(e) {
     this.setState({
       sampple_ans_true: e.target.value
     });
   }
 
-  onCreateSample(e){
+  onCreateSample(e) {
     e.preventDefault();
 
     const obj = {
@@ -146,8 +186,8 @@ export default class SectionAdminCrudCreate extends Component {
     console.log(obj);
 
     axios
-    .post("http://localhost:4000/sample/add", obj)
-    .then(res => console.log(res.data));
+      .post("http://localhost:4000/sample/add", obj)
+      .then(res => console.log(res.data));
 
     this.setState({
       sample_id_course: "",
@@ -164,7 +204,12 @@ export default class SectionAdminCrudCreate extends Component {
       <div style={{ marginTop: 10 }} className="container">
         <h3>CREATE SECTION PROCESS</h3>
         <form onSubmit={this.onSubmit}>
-            <div className="form-group">
+          <div className="form-group">
+            <label>Course: </label>
+            <select id="section_course" class="custom-select form-control"
+            onChange={this.getIdCourseSelected}>{this.tabRow()}</select>
+          </div>
+          {/* <div className="form-group">
             <label>Section Id Course: </label>
             <input
               type="text"
@@ -172,7 +217,7 @@ export default class SectionAdminCrudCreate extends Component {
               value={this.state.section_id_course}
               onChange={this.onChangeIdCourse}
             />
-          </div>
+          </div> */}
           <div className="form-group">
             <label>Section title: </label>
             <input
@@ -217,17 +262,12 @@ export default class SectionAdminCrudCreate extends Component {
             />
           </div>
         </form>
-        <hr/>
+        <hr />
         <h3>CREATE SAMPLE PROCESS</h3>
         <form onSubmit={this.onCreateSample}>
           <div className="form-group">
             <label>Course: </label>
-            <select class="custom-select form-control">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+            <select class="custom-select form-control">{this.tabRow()}</select>
           </div>
           <div className="form-group">
             <label>Id Course: </label>
@@ -292,7 +332,6 @@ export default class SectionAdminCrudCreate extends Component {
           </div>
         </form>
       </div>
-
     );
   }
 }

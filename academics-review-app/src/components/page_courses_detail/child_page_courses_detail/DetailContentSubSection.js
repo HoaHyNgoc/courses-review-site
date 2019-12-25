@@ -30,7 +30,7 @@ class DetailContentSubSection extends Component {
 
   render() {
     return (
-      <div>
+      <div id={this.props.obj.section_title}>
         <div className="news_posts">
             {this.SubSectionTitle(this.props.obj.section_title, this.props.obj.section_link_code)}
             {this.SubSectionDescription(this.props.obj.section_description)}

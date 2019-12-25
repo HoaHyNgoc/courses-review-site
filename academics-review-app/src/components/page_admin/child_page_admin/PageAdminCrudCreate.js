@@ -125,7 +125,7 @@ export default class PageAdminCrudCreate extends Component {
                       />
                 </div>
                 <div className="form-group">
-                    <label>Course price: </label>
+                    <label>Course identification: </label>
                     <input type="text" 
                       className="form-control"
                     //   value={this.state.business_gst_number}
